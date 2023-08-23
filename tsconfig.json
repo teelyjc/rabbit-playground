@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 18",
+  "_version": "18.2.0",
+  "compilerOptions": {
+    "lib": [
+      "es2023"
+    ],
+    "module": "Node16",
+    "target": "es2022",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "baseUrl": ".",
+    "rootDir": "src",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "outDir": "dist",
+    "allowJs": true,
+    "preserveWatchOutput": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

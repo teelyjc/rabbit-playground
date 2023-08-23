@@ -1,0 +1,26 @@
+{
+  "name": "@teelyjc/amqp-playground",
+  "version": "1.0.0-beta",
+  "scripts": {
+    "dev": "tsnd --respawn --transpile-only --watch src --quiet --exit-child -r tsconfig-paths/register src/__Loader__.ts",
+    "build": "tsc & tsc-alias",
+    "start": "node dist/__Loader__.js",
+    "clean": "rimraf node_modules dist"
+  },
+  "author": "Tannatee Juchan <ju.tannatee2543@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/amqplib": "^0.10.1",
+    "@types/node": "^20.4.3",
+    "rimraf": "^5.0.1",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.7",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.3.1",
+    "winston": "^3.10.0"
+  }
+}
