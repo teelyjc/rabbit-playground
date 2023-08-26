@@ -24,6 +24,7 @@ export class MessageBroker {
 
   public async subscribe<T>(
     queueName: string,
+    concurrentQueue: number = 1,
     handler: (
       pattern: string,
       data: T,
@@ -34,7 +35,7 @@ export class MessageBroker {
       await this.init();
     }
 
-    await this.channel.prefetch(1);
+    await this.channel.prefetch(concurrentQueue);
     await this.channel.assertQueue(queueName, {
       durable: true
     });
